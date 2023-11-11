@@ -10,22 +10,19 @@
 
     <v-row class="d-flex flex-column">
       <v-col cols="auto">
-        <ButtonTemplate
-          :text="'Pain'"
-          :icon="'fas fa-face-tired'"
-          :to="'/therapy/pain'" />
+        <ButtonTemplate :text="'Pain'" :icon="'fas fa-face-tired'" />
+        <!--          :to="'/therapy/pain'"-->
+        <!--        />-->
       </v-col>
       <v-col cols="auto">
-        <ButtonTemplate
-          :text="'Stress'"
-          :icon="'fas fa-bolt-lightning'"
-          :to="'/therapy/stress'" />
+        <ButtonTemplate :text="'Stress'" :icon="'fas fa-bolt-lightning'" />
+        <!--          :to="'/therapy/stress'"-->
+        <!--        />-->
       </v-col>
       <v-col cols="auto">
-        <ButtonTemplate
-          :text="'Sleep'"
-          :icon="'mdi:mdi-power-sleep'"
-          :to="'/therapy/sleep'" />
+        <ButtonTemplate :text="'Sleep'" :icon="'mdi:mdi-power-sleep'" />
+        <!--          :to="'/therapy/sleep'"-->
+        <!--        />-->
       </v-col>
     </v-row>
 
@@ -40,17 +37,13 @@ import ButtonTemplate from '@/components/ButtonTemplate.vue';
 
 export default {
   components: { WaveTop, WaveBottom, ButtonTemplate },
-  data() {
-    return {
-      username: {
-        type: String,
-        required: true,
-        default: 'Lisa',
-      }
-    }
-  }
+  props: {
+    username: {
+      type: String,
+      default: 'Lisa',
+    },
+  },
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

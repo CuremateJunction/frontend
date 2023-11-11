@@ -4,7 +4,7 @@
     color="primary"
     elevation="8"
     :append-icon="icon"
-    style="width: 10rem; height: 3rem"
+    style="width: 10rem; height: 3rem;"
     class="d-flex justify-center align-center" />
 </template>
 
@@ -18,10 +18,11 @@ export default {
     },
     icon: {
       type: String,
-      required: false,
+      required: true,
     },
   },
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>
