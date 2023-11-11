@@ -23,9 +23,12 @@ const toggleSymptom = (symptom) => {
   <h3>How do you feel today?</h3>
   <div class="symptoms">
     <ul>
-      <li v-for="symptom in symptoms" :class="{ ticked: symptom.ticked }" @click="toggleSymptom(symptom)">
+      <li
+        v-for="symptom in symptoms"
+        :class="{ ticked: symptom.ticked }"
+        @click="toggleSymptom(symptom)">
         <div class="symptom-item">
-          <span class='emoji'>{{ symptom.emoji }}</span>
+          <span class="emoji">{{ symptom.emoji }}</span>
           <small>{{ symptom.label }}</small>
         </div>
       </li>
@@ -34,40 +37,40 @@ const toggleSymptom = (symptom) => {
 </template>
 
 <style scoped>
-  .symptoms {
-    overflow: scroll;
-  }
-  ul {
-    list-style-type: none;
-    background: #fff;
-    display: flex;
-    justify-content: flex-start;
-  }
-  li {
-    cursor: pointer;
-    padding: 10px;
-    text-align: center;
-  }
-  li.ticked {
-    background: #F1EAFF;
-    border: 2px solid;
-    border-radius: 10px;
-    padding: 8px;
-    border-color: #D0A2F7;
-  }
-  .symptom-item {
-    width: 110px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    user-select: none;
-  }
-  .emoji {
-    font-size: 3rem;
-    user-select: none;
-  }
-  small {
-    color: #D0A2F7;
-    user-select: none;
-  }
+.symptoms {
+  overflow: scroll;
+}
+ul {
+  list-style-type: none;
+  background: #fff;
+  display: flex;
+  justify-content: flex-start;
+}
+li {
+  cursor: pointer;
+  padding: 10px;
+  text-align: center;
+}
+li.ticked {
+  background: #cdfafa;
+  border: 2px solid;
+  border-radius: 10px;
+  padding: 8px;
+  border-color: #0fbfbf;
+}
+.symptom-item {
+  width: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+}
+.emoji {
+  font-size: 3rem;
+  user-select: none;
+}
+small {
+  color: #0fbfbf;
+  user-select: none;
+}
 </style>
