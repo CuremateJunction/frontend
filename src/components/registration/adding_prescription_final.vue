@@ -9,7 +9,7 @@
         <div id="finn">Lisa!</div>
       </div>
     </div>
-    <img id="logo" src='../../assets/finn.svg' alt="Finn logo" />
+    <img id="logo" src="@/assets/finn.svg" alt="Finn logo" />
 
     <div id="description">
       We are so happy to have you here!
@@ -17,7 +17,7 @@
       <div class="d-flex justify-center">
         <img
           class="d-inline-block"
-          src='../../assets/loading.gif'
+          src="@/assets/loading.gif"
           alt="Loading animation"
           width="300px" />
       </div>

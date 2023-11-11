@@ -1,0 +1,62 @@
+<script setup></script>
+
+<template>
+  <div id="item" class="content">
+    <!-- This page serves the purpose of saying hello to a new user before he gets to enter his details -->
+    <div id="title">
+      <div class="text-h5 w-50">
+        Relax with Finn <br />
+        <div id="finn">Meditation</div>
+      </div>
+    </div>
+
+    <iframe
+      id="finnvideo"
+      class="d-flex d-inline-block"
+      width="100%"
+      height="100%"
+      src="https://www.youtube.com/embed/fJyIMgZYpi4?si=lG9Q95yBBn1OFHat&amp;controls=0"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+
+    In the quietude of a dimly lit room, find solace in a comfortable seat.
+    Breathe deep, shedding the day's weight. Soft music whispers tranquility,
+    echoing in the silence. Wear comfort like a second skin. As you close your
+    eyes, set adrift on the gentle waves of your breath. In this moment, let go,
+    and be.
+
+    <a class="link" href="/dashboard"><v-icon icon="mdi-home"></v-icon>Home</a>
+  </div>
+</template>
+
+<style scoped>
+.content {
+  padding-left: 20px;
+  padding-top: 40px;
+  background-image: url('@/assets/header.svg');
+  background-size: 100vw;
+}
+
+#title {
+  font-weight: lighter;
+}
+
+#finn {
+  font-weight: bold;
+  padding-top: 20px;
+  font-size: 80px;
+}
+
+.link {
+  position: absolute;
+  bottom: 20px;
+  text-decoration: none;
+  color: #000000;
+}
+
+#finnvideo {
+  margin-top: 40px;
+}
+</style>

@@ -40,44 +40,44 @@ const toggleSymptom = (symptom) => {
 </template>
 
 <style scoped>
-  .symptoms {
-    overflow: scroll;
-  }
-  h3 {
-    margin-top: 40px;
-  }
-  ul {
-    list-style-type: none;
-    background: #fff;
-    display: flex;
-    justify-content: flex-start;
-    padding-left: 0;
-  }
-  li {
-    cursor: pointer;
-    padding: 10px;
-    text-align: center;
-  }
-  li.ticked {
-    background: #cdfafa;
-    border: 2px solid;
-    border-radius: 10px;
-    padding: 8px;
-    border-color: #0fbfbf;
-  }
-  .symptom-item {
-    width: 110px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    user-select: none;
-  }
-  .emoji {
-    font-size: 3rem;
-    user-select: none;
-  }
-  small {
-    color: #0fbfbf;
-    user-select: none;
-  }
+.symptoms {
+  overflow: scroll;
+}
+h3 {
+  margin-top: 40px;
+}
+ul {
+  list-style-type: none;
+  background: #fff;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 0;
+}
+li {
+  cursor: pointer;
+  padding: 10px;
+  text-align: center;
+}
+li.ticked {
+  background: #cdfafa;
+  border: 2px solid;
+  border-radius: 10px;
+  padding: 8px;
+  border-color: #0fbfbf;
+}
+.symptom-item {
+  width: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+}
+.emoji {
+  font-size: 3rem;
+  user-select: none;
+}
+small {
+  color: #0fbfbf;
+  user-select: none;
+}
 </style>
