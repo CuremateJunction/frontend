@@ -73,4 +73,40 @@ small {
   color: #0fbfbf;
   user-select: none;
 }
+.symptoms {
+  overflow: scroll;
+}
+ul {
+  list-style-type: none;
+  background: #fff;
+  display: flex;
+  justify-content: flex-start;
+}
+li {
+  cursor: pointer;
+  padding: 10px;
+  text-align: center;
+}
+li.ticked {
+  background: #f1eaff;
+  border: 2px solid;
+  border-radius: 10px;
+  padding: 8px;
+  border-color: #d0a2f7;
+}
+.symptom-item {
+  width: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+}
+.emoji {
+  font-size: 3rem;
+  user-select: none;
+}
+small {
+  color: #d0a2f7;
+  user-select: none;
+}
 </style>
