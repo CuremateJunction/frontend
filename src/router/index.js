@@ -22,7 +22,7 @@ const routes = [
         component: () => import('@/views/Help.vue'),
       },
       {
-        path: 'meditation_finn',
+        path: 'therapy/stress',
         name: 'Meditating Finn',
         // route level code-splitting
         // this generates a separate chunk (Home-[hash].js) for this route

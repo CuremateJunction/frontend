@@ -1,5 +1,5 @@
 <script>
-import waveBottom from '@/assets/views/wave-bottom.svg';
+import waveBottom from '@/assets/views/bottom_waves.svg';
 
 export default {
   name: 'JoinFinn',
