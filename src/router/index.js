@@ -8,11 +8,6 @@ const routes = [
     children: [
       {
         path: '',
-        name: 'Home',
-        component: () => import('@/views/Home.vue'),
-      },
-      {
-        path: 'dashboard',
         name: 'Dashboard',
         component: () => import('@/views/Dashboard.vue'),
       },
@@ -46,6 +41,11 @@ const routes = [
         path: 'joinfinn',
         name: 'JoinFinn',
         component: () => import('@/views/JoinFinn.vue'),
+      },
+      {
+        path: 'therapy-pain',
+        name: 'TherapyPain',
+        component: () => import('@/views/TherapyPain.vue'),
       },
     ],
   },

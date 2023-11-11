@@ -5,33 +5,26 @@
     <WaveTop class="d-flex mt-0 pt-0 pl-0 w-100" />
 
     <v-row class="d-flex mt-10 align-center justify-center">
-      <v-col cols="auto" id='title'>
-        WHAT DO YOU WANT TO IMPROVE {{ username.toUpperCase() }}?
-      </v-col>
+      <v-col cols="auto"> RELIEVING PAIN </v-col>
     </v-row>
 
     <v-row class="d-flex flex-column">
       <v-col cols="auto">
-        <ButtonTemplate
-          :text="'Pain'"
-          :icon="'fas fa-face-tired'"
-          :to="'/therapy-pain'" />
+        <ButtonTemplate :text="'Breathe'" :icon="'fas fa-wind'" />
+        <!--          :to="'/therapy/pain'"-->
+        <!--        />-->
       </v-col>
       <v-col cols="auto">
-        <ButtonTemplate :text="'Stress'" :icon="'fas fa-bolt-lightning'" :to="'/therapy/stress'"/>
+        <ButtonTemplate
+          :text="'Meditate'"
+          :icon="'mdi mdi-head-sync-outline'" />
         <!--          :to="'/therapy/stress'"-->
         <!--        />-->
       </v-col>
       <v-col cols="auto">
-        <ButtonTemplate :text="'Sleep'" :icon="'mdi:mdi-power-sleep'" />
+        <ButtonTemplate :text="'Other'" :icon="'mdi:mdi-dots-horizontal'" />
         <!--          :to="'/therapy/sleep'"-->
         <!--        />-->
-      </v-col>
-    </v-row>
-
-    <v-row class="d-flex align-center justify-center">
-      <v-col cols="auto">
-        <v-btn class='v-btn v-btn--active' onclick='location.href="/dashboard"'>Back</v-btn>
       </v-col>
     </v-row>
 
@@ -55,10 +48,4 @@ export default {
 };
 </script>
 
-<style scoped>
-
-#title {
-  font-weight: bolder;
-}
-
-</style>
+<style scoped></style>

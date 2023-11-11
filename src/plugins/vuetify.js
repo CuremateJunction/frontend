@@ -6,9 +6,11 @@
 
 // Styles
 import '@fortawesome/fontawesome-free/css/all.css'; // Ensure your project is capable of handling css files
+import 'material-design-icons-iconfont/dist/material-design-icons.css'; // Ensure your project is capable of handling css files
 import '@mdi/font/css/materialdesignicons.css';
 import 'vuetify/styles';
 import { aliases, fa } from 'vuetify/iconsets/fa';
+import { md } from 'vuetify/iconsets/md';
 import { mdi } from 'vuetify/iconsets/mdi';
 
 // Composables
@@ -39,6 +41,7 @@ export default createVuetify({
     sets: {
       fa,
       mdi,
+      md,
     },
   },
   theme: {
