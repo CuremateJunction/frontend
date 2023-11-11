@@ -15,14 +15,15 @@ function next_step() {
     registration_process_counter.value += 1;
   } else {
     // redirect to home page
-    this.$router.push({ name: 'Home' });
+    this.$router.push({ name: 'dashboard' });
   }
 }
 </script>
 
-<template>
-  <div id='overall'>
-    <div id='maincontent class="h-75'>
+<template fluid class='primary fill-height'>
+  <div id='overall' class='h-100'>
+
+    <div id="maincontent" class="h-75">
 
       <hellothere v-if="registration_process_counter === 0" />
 
@@ -33,11 +34,11 @@ function next_step() {
     </div>
 
 
-    <div id='button' class="h-25">
+    <div id='button_cont' class="d-flex h-25 justify-center">
       <!-- Button that sticks to the right bottom in bootstrap -->
-      <v-col cols="auto" class="justify-end text-right">
-        <button @click="next_step">
-          <v-btn>Next</v-btn>
+      <v-col cols="auto" class="d-flex ">
+        <button id='button' @click="next_step">
+          <v-btn size='large'>Next</v-btn>
         </button>
       </v-col>
 
@@ -51,9 +52,11 @@ function next_step() {
 #overall {
   background: url(@/assets/blue_wave.png);
   background-repeat: no-repeat;
-  background-size: cover;
   min-height: 100%;
+  background-position: bottom;
+  background-size: 100% 80%;
   }
+
 
 
 
