@@ -9,7 +9,7 @@
         <div id="finn">FINN</div>
       </div>
     </div>
-    <img id="logo" src='../../assets/finn.svg' alt="Finn Logo" />
+    <img id="logo" src="../../assets/finn.svg" alt="Finn Logo" />
 
     <div id="bannertext">
       RELIEF PAIN. <br />
