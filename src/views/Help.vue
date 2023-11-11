@@ -1,5 +1,4 @@
-<script setup>
-</script>
+<script setup></script>
 
 <template>
   <div id="item" class="content">
@@ -12,65 +11,58 @@
     </div>
 
     <div class="d-flex align-center flex-column cards">
-
       <v-card
         class="mx-auto card my-4"
         width="400"
         title="Your doctor"
-        text='Dr. Med. Stefanson is available from 8am to 6pm'
+        text="Dr. Med. Stefanson is available from 8am to 6pm"
         prepend-icon="mdi-doctor"
         append-icon="mdi-phone-dial"
         href="tel:+49123-456-7890"
         target="_blank"
-        rel="noopener"
-      ></v-card>
+        rel="noopener"></v-card>
 
       <v-card
         class="mx-auto card my-4"
         width="400"
         title="Speak with a psychologist."
-        text='Hotline is available 24/7'
+        text="Hotline is available 24/7"
         prepend-icon="mdi-doctor"
         append-icon="mdi-phone-dial"
         href="tel:+49123-456-7890"
         target="_blank"
-        rel="noopener"
-      ></v-card>
-
+        rel="noopener"></v-card>
 
       <v-card
         class="mx-auto card my-4"
         width="400"
         title="Speak with a pharmacist."
-        text='Nearby pharmacy 1.2 km away - open 24/7'
+        text="Nearby pharmacy 1.2 km away - open 24/7"
         prepend-icon="mdi-pill"
         append-icon="mdi-navigation-variant"
         href="http://maps.google.com/?q=Yliopiston Apteekki, Mannerheimintie 96, Helsinki"
         target="_blank"
-        rel="noopener"
-      ></v-card>
+        rel="noopener"></v-card>
 
       <v-card
         class="mx-auto card my-4"
         width="400"
         title="Elisa "
-        text='Your family contact.'
+        text="Your family contact."
         prepend-icon="mdi-home-heart"
         append-icon="mdi-phone-dial"
         href="tel:+49123-456-7890"
         target="_blank"
-        rel="noopener"
-      ></v-card>
+        rel="noopener"></v-card>
 
       <v-alert
-        class='mx-auto card my-4'
+        class="mx-auto card my-4"
         density="compact"
         type="warning"
-        text="In case of an emergency, please call 112."
-      ></v-alert>
+        text="In case of an emergency, please call 112."></v-alert>
     </div>
 
-    <a class='link' href='/dashboard' ><v-icon icon="mdi-home"></v-icon>Home</a>
+    <a class="link" href="/dashboard"><v-icon icon="mdi-home"></v-icon>Home</a>
   </div>
 </template>
 
@@ -78,14 +70,8 @@
 .content {
   padding-left: 20px;
   padding-top: 40px;
-  background-image: url("@/assets/header.svg");
+  background-image: url('@/assets/header.svg');
   background-size: 100vw;
-}
-
-#logo {
-  position: absolute;
-  right: 20px;
-  top: 50px;
 }
 
 #title {
@@ -100,16 +86,15 @@
 
 .card {
   /* margin-bottom: 20px; */
-  background-color: #38E3D1;
+  background-color: #38e3d1;
 }
 
 .cards {
   margin-top: 80px;
 }
 
-.link{
+.link {
   text-decoration: none;
   color: #000000;
 }
-
 </style>
