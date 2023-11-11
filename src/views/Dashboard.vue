@@ -2,6 +2,7 @@
 import Medications from '@/components/Medications.vue';
 import Symptoms from '@/components/Symptoms.vue';
 import Assistance from '@/components/Assistance.vue';
+import router from '@/router';
 
 let symptomsSelected = 0;
 
@@ -11,48 +12,74 @@ const onSymptomsSelected = (isSelected) => {
   } else {
     symptomsSelected--;
   }
+  if(symptomsSelected > 2){
+    router.push({ name: 'JoinFinn' });
+  }
   console.log(symptomsSelected);
 };
 </script>
 
 <template>
-  <div class="content"></div>
   <div class="dashboard">
     <div class="flex">
       <div class="row align-items-center">
         <div class="col-4 welcome">
-          <h1>HELLO,</h1>
+          <h3>HELLO,</h3>
           <h2>Lisa!</h2>
         </div>
-        <div class="col-8">
-          <img src="/dolphin.png" alt="hello there" />
-        </div>
+        <img id="finn" src="@/assets/finn.svg" alt="hello there" />
       </div>
     </div>
 
+    <v-container class="content">
+      <v-row no-gutters>
+        <div class='w-100'>
+          <p class='d-flex justify-center'>
+            Not feeling well?
+          </p>
+        </div>
+        <button class='v-btn dashboard_button' id='join' onclick='location.href="/joinfinn"'>Try FINN Pain Relief</button>
+
+        <div id='divider' class='w-100'>
+          <p class='d-flex justify-center'>
+            ----------------- OR -----------------
+          </p>
+        </div>
+        <v-col>
+          <v-sheet class="pa-2 ma-2">
+            <button class='v-btn dashboard_button' onclick='location.href="todo"'>Meidcation Journey</button>
+          </v-sheet>
+        </v-col>
+        <v-col>
+          <v-sheet class="pa-2 ma-2">
+            <button class='v-btn dashboard_button' onclick='location.href="help"'>Seek Assistance</button>
+          </v-sheet>
+        </v-col>
+      </v-row>
+    </v-container>
+
     <Symptoms @symptomsSelected="onSymptomsSelected" />
-    <Medications />
-    <Assistance />
+
+    <div v-if='symptomsSelected > 1'>
+      Hi!
+    </div>
+
   </div>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-    <path
-      fill="#0badbf"
-      fill-opacity="1"
-      d="M0,96L48,90.7C96,85,192,75,288,85.3C384,96,480,128,576,165.3C672,203,768,245,864,229.3C960,213,1056,139,1152,101.3C1248,64,1344,64,1392,64L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-  </svg>
 </template>
 
 <style scoped>
 .dashboard {
-  font-family: 'Roboto', sans-serif;
   padding-left: 20px;
   padding-right: 20px;
   background-image: url('@/assets/header.svg');
   background-size: 100vw;
+  overflow: hidden;
 }
+
 h1 {
   font-size: 3rem;
 }
+
 h2 {
   font-size: 6rem;
 }
@@ -61,4 +88,40 @@ img {
   max-width: 800px;
   max-height: 800px;
 }
+
+.dashboard_button {
+  background-color: #32D9C8;
+  color: #000000;
+  font-weight: bolder;
+  min-height: 100px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+#join {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+#finn {
+  position: absolute;
+  width: 45vw;
+  top: 1vh;
+  left: 55vw;
+}
+
+#divider {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.welcome {
+  padding-top: 5vh;
+  line-height: normal;
+}
+
+.content  {
+  padding-top: 10vh;
+}
+
 </style>
