@@ -1,5 +1,5 @@
 {
-  "name": "CureMate",
+  "name": "curemate",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -17,15 +17,14 @@
     "roboto-fontface": "*",
     "vue": "^3.2.0",
     "vue-router": "^4.0.0",
-    "vuetify": "^3.0.0",
-    "yarn": "^1.22.19"
+    "vuetify": "^3.0.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
     "eslint": "^8.37.0",
     "eslint-plugin-vue": "^9.3.0",
     "prettier": "3.0.3",
-    "sass": "^1.60.0",
+    "sass": "^1.69.5",
     "unplugin-fonts": "^1.0.3",
     "vite": "^4.2.0",
     "vite-plugin-vuetify": "^1.0.0"
