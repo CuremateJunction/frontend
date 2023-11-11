@@ -15,7 +15,7 @@
         <!--        />-->
       </v-col>
       <v-col cols="auto">
-        <ButtonTemplate :text="'Stress'" :icon="'fas fa-bolt-lightning'" />
+        <ButtonTemplate :text="'Stress'" :icon="'fas fa-bolt-lightning'" :to="'/therapy/stress'"/>
         <!--          :to="'/therapy/stress'"-->
         <!--        />-->
       </v-col>

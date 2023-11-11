@@ -14,7 +14,7 @@
 
     <img class="d-flex" src="@/assets/dead_dolphin.svg" width="300" />
 
-    <a class="link" href="/dashboard"><v-icon icon="mdi-home"></v-icon>Home</a>
+    <a class="link" href="/dashboard"><v-icon icon="mdi mdi-home"></v-icon>Home</a>
   </div>
 </template>
 

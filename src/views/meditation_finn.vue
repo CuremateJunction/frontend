@@ -1,4 +1,5 @@
-<script setup></script>
+<script setup>
+</script>
 
 <template>
   <div id="item" class="content">
@@ -13,7 +14,7 @@
     <iframe
       id="finnvideo"
       class="d-flex d-inline-block"
-      width="100%"
+      width="90%"
       height="100%"
       src="https://www.youtube.com/embed/fJyIMgZYpi4?si=lG9Q95yBBn1OFHat&amp;controls=0"
       title="YouTube video player"
@@ -21,13 +22,15 @@
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowfullscreen></iframe>
 
-    In the quietude of a dimly lit room, find solace in a comfortable seat.
-    Breathe deep, shedding the day's weight. Soft music whispers tranquility,
-    echoing in the silence. Wear comfort like a second skin. As you close your
-    eyes, set adrift on the gentle waves of your breath. In this moment, let go,
-    and be.
+    <p id='paragraph'>
+      In the quietude of a dimly lit room, find solace in a comfortable seat.
+      Breathe deep, shedding the day's weight. Soft music whispers tranquility,
+      echoing in the silence. Wear comfort like a second skin. As you close your
+      eyes, set adrift on the gentle waves of your breath. In this moment, let go,
+      and be.
+      </p>
 
-    <a class="link" href="/dashboard"><v-icon icon="mdi-home"></v-icon>Home</a>
+    <a class="link" href="/dashboard"><v-icon icon="mdi mdi-home"></v-icon>Home</a>
   </div>
 </template>
 
@@ -37,6 +40,7 @@
   padding-top: 40px;
   background-image: url('@/assets/header.svg');
   background-size: 100vw;
+
 }
 
 #title {
@@ -46,7 +50,7 @@
 #finn {
   font-weight: bold;
   padding-top: 20px;
-  font-size: 80px;
+  font-size: 50px;
 }
 
 .link {
@@ -59,4 +63,10 @@
 #finnvideo {
   margin-top: 40px;
 }
+
+#paragraph {
+  padding-right: 10px;
+}
+
+
 </style>
