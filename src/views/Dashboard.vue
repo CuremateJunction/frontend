@@ -21,7 +21,7 @@ const onSymptomsSelected = (isSelected) => {
       <div class='flex'>
         <div class='row align-items-center'>
           <div class='col-4 welcome'>
-            <h1>HELLO</h1>
+            <h1>HELLO,</h1>
             <h2>Lisa!</h2>
           </div>
           <div class='col-8'>
