@@ -1,6 +1,7 @@
 <template>
   <v-container
-    class="d-flex flex-column align-center ma-0 pa-0 justify-center h-100">
+    class="d-flex flex-column align-center ma-0 pa-0 justify-center h-100"
+    fluid>
     <WaveTop class="d-flex mt-0 pt-0 pl-0 w-100" />
 
     <v-row class="d-flex align-center justify-center">
