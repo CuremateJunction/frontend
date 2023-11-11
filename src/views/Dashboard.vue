@@ -12,7 +12,7 @@ const onSymptomsSelected = (isSelected) => {
   } else {
     symptomsSelected--;
   }
-  if(symptomsSelected > 2){
+  if (symptomsSelected > 2) {
     router.push({ name: 'JoinFinn' });
   }
   console.log(symptomsSelected);
@@ -33,26 +33,37 @@ const onSymptomsSelected = (isSelected) => {
 
     <v-container class="content">
       <v-row no-gutters>
-        <div class='w-100'>
-          <p class='d-flex justify-center'>
-            Not feeling well?
-          </p>
+        <div class="w-100">
+          <p class="d-flex justify-center">Not feeling well?</p>
         </div>
-        <button class='v-btn dashboard_button' id='join' onclick='location.href="/joinfinn"'>Try FINN Pain Relief</button>
+        <button
+          class="v-btn dashboard_button"
+          id="join"
+          onclick='location.href="/joinfinn"'>
+          Try FINN Pain Relief
+        </button>
 
-        <div id='divider' class='w-100'>
-          <p class='d-flex justify-center'>
+        <div id="divider" class="w-100">
+          <p class="d-flex justify-center">
             ----------------- OR -----------------
           </p>
         </div>
         <v-col>
           <v-sheet class="pa-2 ma-2">
-            <button class='v-btn dashboard_button' onclick='location.href="todo"'>Meidcation Journey</button>
+            <button
+              class="v-btn dashboard_button"
+              onclick='location.href="todo"'>
+              Meidcation Journey
+            </button>
           </v-sheet>
         </v-col>
         <v-col>
           <v-sheet class="pa-2 ma-2">
-            <button class='v-btn dashboard_button' onclick='location.href="help"'>Seek Assistance</button>
+            <button
+              class="v-btn dashboard_button"
+              onclick='location.href="help"'>
+              Seek Assistance
+            </button>
           </v-sheet>
         </v-col>
       </v-row>
@@ -60,10 +71,7 @@ const onSymptomsSelected = (isSelected) => {
 
     <Symptoms @symptomsSelected="onSymptomsSelected" />
 
-    <div v-if='symptomsSelected > 1'>
-      Hi!
-    </div>
-
+    <div v-if="symptomsSelected > 1">Hi!</div>
   </div>
 </template>
 
@@ -90,7 +98,7 @@ img {
 }
 
 .dashboard_button {
-  background-color: #32D9C8;
+  background-color: #32d9c8;
   color: #000000;
   font-weight: bolder;
   min-height: 100px;
@@ -120,8 +128,7 @@ img {
   line-height: normal;
 }
 
-.content  {
+.content {
   padding-top: 10vh;
 }
-
 </style>

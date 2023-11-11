@@ -2,7 +2,7 @@
 import waveTop from '@/assets/views/wave-top.svg';
 
 export default {
-  name: 'JoinFinn',
+  name: 'Header',
   data() {
     return {
       waveTop,

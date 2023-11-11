@@ -1,5 +1,4 @@
-<script setup>
-</script>
+<script setup></script>
 
 <template>
   <div id="item" class="content">
@@ -22,15 +21,17 @@
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowfullscreen></iframe>
 
-    <p id='paragraph'>
+    <p id="paragraph">
       In the quietude of a dimly lit room, find solace in a comfortable seat.
       Breathe deep, shedding the day's weight. Soft music whispers tranquility,
       echoing in the silence. Wear comfort like a second skin. As you close your
-      eyes, set adrift on the gentle waves of your breath. In this moment, let go,
-      and be.
-      </p>
+      eyes, set adrift on the gentle waves of your breath. In this moment, let
+      go, and be.
+    </p>
 
-    <a class="link" href="/dashboard"><v-icon icon="mdi mdi-home"></v-icon>Home</a>
+    <a class="link" href="/dashboard"
+      ><v-icon icon="mdi mdi-home"></v-icon>Home</a
+    >
   </div>
 </template>
 
@@ -40,7 +41,6 @@
   padding-top: 40px;
   background-image: url('@/assets/header.svg');
   background-size: 100vw;
-
 }
 
 #title {
@@ -67,6 +67,4 @@
 #paragraph {
   padding-right: 10px;
 }
-
-
 </style>

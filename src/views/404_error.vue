@@ -1,41 +1,40 @@
-<script setup></script>
-
 <template>
-  <div id="item" class="content">
+  <v-container
+    class="d-flex flex-column align-center ma-0 pa-0 justify-start h-100"
+    fluid>
+    <WaveTop class="d-flex mt-0 pt-0 pl-0 w-100" />
     <!-- This page serves the purpose of saying hello to a new user before he gets to enter his details -->
-    <div id="title">
-      <div class="text-h5 w-50">
-        FINN NOT FOUND <br />
-        <div id="finn">404</div>
-      </div>
-    </div>
-    <br />
-    <br />
+    <v-row class="d-flex flex-column align-center">
+      <div class="text-h5 w-50">FINN NOT FOUND</div>
+      <h1 class="text-h1 font-weight-bold">404</h1>
+    </v-row>
 
-    <img class="d-flex" src="@/assets/dead_dolphin.svg" width="300" />
+    <v-row class="d-flex align-start">
+      <v-img
+        class="d-flex justify-self-center align-start"
+        src="@/assets/dead_dolphin.svg"
+        :width="200" />
+    </v-row>
 
-    <a class="link" href="/dashboard"><v-icon icon="mdi mdi-home"></v-icon>Home</a>
-  </div>
+    <v-row class="d-flex flex-column justify-start align-center">
+      <v-btn
+        class="link"
+        href="/dashboard"
+        prepend-icon="mdi mdi-home"
+        text="Home"></v-btn>
+    </v-row>
+  </v-container>
 </template>
 
+<script>
+import WaveTop from '@/components/WaveTop.vue';
+
+export default {
+  components: { WaveTop },
+};
+</script>
+
 <style scoped>
-.content {
-  padding-left: 20px;
-  padding-top: 40px;
-  background-image: url('@/assets/header.svg');
-  background-size: 100vw;
-}
-
-#title {
-  font-weight: lighter;
-}
-
-#finn {
-  font-weight: bold;
-  padding-top: 20px;
-  font-size: 80px;
-}
-
 .link {
   position: absolute;
   bottom: 20px;
