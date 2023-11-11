@@ -42,6 +42,11 @@ const routes = [
         // which is lazy-loaded when the route is visited.
         component: () => import('@/views/404_error.vue'),
       },
+      {
+        path: 'joinfinn',
+        name: 'JoinFinn',
+        component: () => import('@/views/JoinFinn.vue'),
+      },
     ],
   },
 ];
