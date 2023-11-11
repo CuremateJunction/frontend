@@ -1,6 +1,8 @@
 <script setup>
 import { ref } from 'vue';
 
+const props = defineProps(['onSymptomsSelected']);
+
 const symptoms = ref([
   { emoji: '🥱', label: 'Tired', ticked: false },
   { emoji: '🤕', label: 'Headache', ticked: false },
@@ -16,6 +18,7 @@ const symptoms = ref([
 
 const toggleSymptom = (symptom) => {
   symptom.ticked = !symptom.ticked;
+  props.onSymptomsSelected(symptom.ticked);
 };
 </script>
 
@@ -40,11 +43,15 @@ const toggleSymptom = (symptom) => {
 .symptoms {
   overflow: scroll;
 }
+h3 {
+  margin-top: 40px;
+}
 ul {
   list-style-type: none;
   background: #fff;
   display: flex;
   justify-content: flex-start;
+  padding-left: 0;
 }
 li {
   cursor: pointer;
@@ -52,11 +59,11 @@ li {
   text-align: center;
 }
 li.ticked {
-  background: #f1eaff;
+  background: #cdfafa;
   border: 2px solid;
   border-radius: 10px;
   padding: 8px;
-  border-color: #d0a2f7;
+  border-color: #0fbfbf;
 }
 .symptom-item {
   width: 110px;
@@ -70,7 +77,7 @@ li.ticked {
   user-select: none;
 }
 small {
-  color: #d0a2f7;
+  color: #0fbfbf;
   user-select: none;
 }
 </style>
