@@ -2,7 +2,7 @@
 import waveBottom from '@/assets/views/bottom_waves.svg';
 
 export default {
-  name: 'JoinFinn',
+  name: 'Footer',
   data() {
     return {
       waveBottom,
@@ -12,7 +12,12 @@ export default {
 </script>
 
 <template>
-  <img :src="waveBottom" />
+  <v-btn
+    prepend-icon="mdi mdi-home"
+    text="Home"
+    class="mb-2"
+    color="primary-darken-1"
+    :to="'/'" />
 </template>
 
 <style scoped></style>

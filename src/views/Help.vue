@@ -74,19 +74,19 @@
     </v-row>
 
     <v-row class="d-flex align-start justify-center">
-      <v-btn icon="mdi mdi-home" text="Home"></v-btn>
+      <Footer class="mt-auto" />
     </v-row>
   </v-container>
 </template>
 
 <script>
-import WaveTop from '@/components/WaveTop.vue';
-import WaveBottom from '@/components/WaveBottom.vue';
+import WaveTop from '@/components/Header.vue';
+import Footer from '@/components/Footer.vue';
 
 export default {
   components: {
     WaveTop,
-    WaveBottom,
+    Footer,
   },
 };
 </script>

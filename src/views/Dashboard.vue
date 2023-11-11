@@ -20,7 +20,7 @@ const onSymptomsSelected = (isSelected) => {
 </script>
 
 <template>
-  <div class="dashboard">
+  <v-container class="dashboard d-flex flex-column">
     <div class="flex">
       <div class="row align-items-center">
         <div class="col-4 welcome">
@@ -31,23 +31,23 @@ const onSymptomsSelected = (isSelected) => {
       </div>
     </div>
 
-    <v-container class="content">
-      <v-row no-gutters>
-        <div class="w-100">
+    <v-container class="d-flex justify-self-start align-self-start content">
+      <v-row no-gutters class='justify-center'>
+        <v-col class="w-100">
           <p class="d-flex justify-center">Not feeling well?</p>
-        </div>
-        <button
+        </v-col>
+        <v-btn
           class="v-btn dashboard_button"
           id="join"
           onclick='location.href="/joinfinn"'>
           Try FINN Pain Relief
-        </button>
+        </v-btn>
 
-        <div id="divider" class="w-100">
+        <v-col id="divider" class="w-100">
           <p class="d-flex justify-center">
             ----------------- OR -----------------
           </p>
-        </div>
+        </v-col>
         <v-col>
           <v-sheet class="pa-2 ma-2">
             <button
@@ -72,7 +72,7 @@ const onSymptomsSelected = (isSelected) => {
     <Symptoms @symptomsSelected="onSymptomsSelected" />
 
     <div v-if="symptomsSelected > 1">Hi!</div>
-  </div>
+  </v-container>
 </template>
 
 <style scoped>

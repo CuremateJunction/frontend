@@ -32,25 +32,17 @@
       </v-col>
     </v-row>
 
-    <v-row class="d-flex align-center justify-center">
-      <v-col cols="auto">
-        <v-btn class="v-btn v-btn--active" onclick='location.href="/dashboard"'
-          >Back</v-btn
-        >
-      </v-col>
-    </v-row>
-
-    <WaveBottom class="mt-auto w-100" />
+    <Footer class="mt-auto" />
   </v-container>
 </template>
 
 <script>
-import WaveTop from '@/components/WaveTop.vue';
-import WaveBottom from '@/components/WaveBottom.vue';
+import WaveTop from '@/components/Header.vue';
+import Footer from '@/components/Footer.vue';
 import ButtonTemplate from '@/components/ButtonTemplate.vue';
 
 export default {
-  components: { WaveTop, WaveBottom, ButtonTemplate },
+  components: { WaveTop, Footer, ButtonTemplate },
   props: {
     username: {
       type: String,

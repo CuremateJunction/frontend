@@ -28,13 +28,13 @@
       </v-col>
     </v-row>
 
-    <WaveBottom class="mt-auto w-100" />
+    <WaveBottom class="mt-auto" />
   </v-container>
 </template>
 
 <script>
-import WaveTop from '@/components/WaveTop.vue';
-import WaveBottom from '@/components/WaveBottom.vue';
+import WaveTop from '@/components/Header.vue';
+import WaveBottom from '@/components/Footer.vue';
 import ButtonTemplate from '@/components/ButtonTemplate.vue';
 
 export default {

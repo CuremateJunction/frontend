@@ -17,17 +17,14 @@
     </v-row>
 
     <v-row class="d-flex flex-column justify-start align-center">
-      <v-btn
-        class="link"
-        href="/dashboard"
-        prepend-icon="mdi mdi-home"
-        text="Home"></v-btn>
+        <Footer></Footer>
     </v-row>
   </v-container>
 </template>
 
 <script>
-import WaveTop from '@/components/WaveTop.vue';
+import WaveTop from '@/components/Header.vue';
+import Footer from '@/components/Footer.vue';
 
 export default {
   components: { WaveTop },
