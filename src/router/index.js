@@ -30,6 +30,14 @@ const routes = [
         component: () => import('@/views/meditation_finn.vue'),
       },
       {
+        path: 'therapy/breathing',
+        name: 'Breathing Finn',
+        // route level code-splitting
+        // this generates a separate chunk (Home-[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import('@/views/breathing_finn.vue'),
+      },
+      {
         path: '/:notFound',
         name: 'NotFound',
         // route level code-splitting

@@ -26,8 +26,8 @@
         <!--        />-->
       </v-col>
       <v-col cols="auto">
-        <ButtonTemplate :text="'Sleep'" :icon="'mdi:mdi-power-sleep'" />
-        <!--          :to="'/therapy/sleep'"-->
+        <ButtonTemplate :text="'Sleep'" :icon="'mdi:mdi-power-sleep'"
+        :to="'/therapy/breathing'"/>
         <!--        />-->
       </v-col>
     </v-row>
