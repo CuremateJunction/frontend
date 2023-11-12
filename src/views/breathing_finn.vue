@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import Footer from '@/components/Footer.vue';
+</script>
 
 <template>
   <div id="item" class="content">
@@ -26,9 +28,10 @@
       Inhale revitalizing energy, exhale burdens. Let your breath be a melody of calm, guiding you to inner peace.
     </p>
 
-    <a class="link" href="/dashboard"
-      ><v-icon icon="mdi mdi-home"></v-icon>Home</a
-    >
+    <v-row class="d-flex align-center justify-center">
+      <Footer class="mb-2"></Footer>
+    </v-row>
+
   </div>
 </template>
 

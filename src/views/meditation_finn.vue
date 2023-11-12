@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import Footer from '@/components/Footer.vue';
+</script>
 
 <template>
   <div id="item" class="content">
@@ -29,7 +31,10 @@
       go, and be.
     </p>
 
-    <a class="link" href="/"><v-icon icon="mdi mdi-home"></v-icon>Home</a>
+    <v-row class="d-flex align-center justify-center">
+      <Footer class="mb-2"></Footer>
+    </v-row>
+
   </div>
 </template>
 
