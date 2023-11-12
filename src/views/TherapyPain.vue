@@ -10,15 +10,15 @@
 
     <v-row class="d-flex flex-column">
       <v-col cols="auto">
-        <ButtonTemplate :text="'Breathe'" :icon="'fas fa-wind'" />
-        <!--          :to="'/therapy/pain'"-->
+        <ButtonTemplate :text="'Breathe'" :icon="'fas fa-wind'"
+        :to="'/therapy/breathing'" />
         <!--        />-->
       </v-col>
       <v-col cols="auto">
         <ButtonTemplate
           :text="'Meditate'"
-          :icon="'mdi mdi-head-sync-outline'" />
-        <!--          :to="'/therapy/stress'"-->
+          :icon="'mdi mdi-head-sync-outline'"
+          :to="'/therapy/stress'"/>
         <!--        />-->
       </v-col>
       <v-col cols="auto">
