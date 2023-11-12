@@ -22,6 +22,14 @@ const routes = [
         component: () => import('@/views/Help.vue'),
       },
       {
+        path: 'profile',
+        name: 'Profile Page',
+        // route level code-splitting
+        // this generates a separate chunk (Home-[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import('@/views/profile.vue'),
+      },
+      {
         path: 'therapy/stress',
         name: 'Meditating Finn',
         // route level code-splitting

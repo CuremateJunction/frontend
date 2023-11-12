@@ -52,7 +52,7 @@ let taken = 0;
 
     <v-row align="start" :dense="true" class="d-block pa-0 ma-0">
       <v-col cols="auto" class="d-inline-block ma-0 pa-0">
-        <h3 class="text-h4">Your journey,</h3>
+        <h3 class="text-h4">Your profile,</h3>
         <h2 class='text-h1'>Lisa!</h2>
 
       </v-col>
@@ -62,7 +62,7 @@ let taken = 0;
           id="finn"
           src="@/assets/finn.svg"
           alt="hello there"
-          width="180"
+          width="170"
           max-width="300px"
           class="ma-0 pa-0" />
       </v-col>
@@ -70,23 +70,21 @@ let taken = 0;
 
     <v-row class="d-flex flex-row mb-auto mx-auto">
       <v-col class="d-flex flex-column align-self-start">
-        <p class="d-flex justify-center">Nov. 12 2023</p>
+        <p class="d-flex justify-center">Journey started 2.11.2022</p>
 
         <div v-for="medical in medicals">
 
           <v-card width="100%">
             <template v-slot:title>
-              Your prescription
+              Lisa Müller
             </template>
 
             <template v-slot:subtitle>
-              by Dr. Med. Stefanson
+              Chronic Pain Patient
             </template>
 
             <template v-slot:text>
-              {{ medical.title }} - scheduled  {{ medical.frequency }} pills/day.
-              <br>
-              You took: {{ medical.taken }}.
+              Content upcoming.
             </template>
           </v-card>
           <!--
@@ -96,24 +94,6 @@ let taken = 0;
           </div>
           -->
 
-          <v-btn
-            v-if="medical.taken < medical.frequency"
-            class="mt-5"
-            id="join"
-            height="60"
-            @click="takePill(medical)">
-            Take your current dose.
-            <v-img class="ml-2" width="30" src="@/assets/dolphin-icon.svg" />
-          </v-btn>
-
-        <v-btn v-if="medical.taken >= medical.frequency"
-          class="mt-5"
-          append-icon="mdi mdi-phone"
-          height="60"
-          width='100%'
-          onclick='location.href="/joinfinn"'>
-          Check alternatives
-        </v-btn>
 
         </div>
 
@@ -121,8 +101,16 @@ let taken = 0;
           class="mt-5"
           append-icon="mdi mdi-phone"
           height="60"
+          width='100%'
           onclick='location.href="/help"'>
           SEEK Assistance
+        </v-btn>
+        <v-btn
+          class="mt-5"
+          append-icon="mdi mdi-phone"
+          height="60"
+          onclick='location.href="/registration"'>
+          Register Yourself
         </v-btn>
       </v-col>
 

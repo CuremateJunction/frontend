@@ -47,7 +47,7 @@
             class="mt-5 mx-3"
             append-icon="mdi mdi-phone"
             height="90"
-            onclick='location.href="/joinfinn"'>
+            onclick='location.href="/help"'>
             SEEK ASSISTANCE
           </v-btn>
 
@@ -55,7 +55,7 @@
             class="mt-5 mx-3"
             append-icon="mdi mdi-account"
             height="90"
-            onclick='location.href="/joinfinn"'>
+            onclick='location.href="/profile"'>
             PROFILE
           </v-btn>
         </v-row>
