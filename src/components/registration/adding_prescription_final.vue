@@ -44,8 +44,9 @@
 
 #logo {
   position: absolute;
-  right: 20px;
+  right: 0;
   top: 50px;
+  width: 50vw;
 }
 
 #title {

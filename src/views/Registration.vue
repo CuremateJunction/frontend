@@ -3,6 +3,7 @@ import { ref } from 'vue';
 import adding_prescription_final from '@/components/registration/adding_prescription_final.vue';
 import hellothere from '@/components/registration/hellothere.vue';
 import prescription_enter from '@/components/registration/prescription_enter.vue';
+import router from '@/router';
 
 // this variable indicates the current step of the registration process
 // 0 = hello there, 1 = enter prescription, 2 = thank you and redirect
@@ -15,7 +16,7 @@ function next_step() {
     registration_process_counter.value += 1;
   } else {
     // redirect to home page
-    this.$router.push({ name: 'dashboard' });
+    router.push({ name: 'Dashboard' });
   }
 }
 </script>

@@ -1,3 +1,49 @@
+
+<script>
+import Header from '@/components/Header.vue';
+import Medications from '@/components/Medications.vue';
+import Symptoms from '@/components/Symptoms.vue';
+import Assistance from '@/components/Assistance.vue';
+import router from '@/router';
+import WaveTop from '@/components/Header.vue';
+import Footer from '@/components/Footer.vue';
+
+export default {
+  data() {
+    return {
+      medicals: [
+        {
+          imageUrl: 'http://tiny.cc/r23evz',
+          title: 'Opiod B',
+          frequency: 2,
+          taken: 0,
+        },
+      ],
+    };
+  },
+  methods: {
+    takePill(medical) {
+      medical.taken += 1;
+      console.log(medical.taken);
+    },
+  },
+  components: {
+    Footer,
+    Header,
+    Medications,
+    Symptoms,
+    Assistance,
+    WaveTop,
+  },
+};
+
+
+let symptomsSelected = 0;
+let taken = 0;
+
+
+</script>
+
 <template>
   <v-container
     class="d-flex flex-column align-center ma-0 pa-0 justify-center h-100"
@@ -6,8 +52,9 @@
 
     <v-row align="start" :dense="true" class="d-block pa-0 ma-0">
       <v-col cols="auto" class="d-inline-block ma-0 pa-0">
-        <h3 class="text-h3">HELLO,</h3>
-        <h2 class="text-h1">Lisa!</h2>
+        <h3 class="text-h4">Your journey,</h3>
+        <h2 class='text-h1'>Lisa!</h2>
+
       </v-col>
 
       <v-col cols="auto" class="d-inline-block ma-0 pa-0 ml-1">
@@ -23,43 +70,62 @@
 
     <v-row class="d-flex flex-row mb-auto mx-auto">
       <v-col class="d-flex flex-column align-self-start">
-        <p class="d-flex justify-center">Not feeling well?</p>
+        <p class="d-flex justify-center">Nov. 12 2023</p>
+
+        <div v-for="medical in medicals">
+
+          <v-card width="100%">
+            <template v-slot:title>
+              Your prescription
+            </template>
+
+            <template v-slot:subtitle>
+              by Dr. Med. Stefanson
+            </template>
+
+            <template v-slot:text>
+              {{ medical.title }} - scheduled  {{ medical.frequency }} pills/day.
+              <br>
+              You took: {{ medical.taken }}.
+            </template>
+          </v-card>
+          <!--
+          <div>
+            <h3></h3>
+            <p>Taken: {{ medical.taken }} of {{ medical.frequency }} pills/day</p>
+          </div>
+          -->
+
+          <v-btn
+            v-if="medical.taken < medical.frequency"
+            class="mt-5"
+            id="join"
+            height="60"
+            @click="takePill(medical)">
+            Take your current dose.
+            <v-img class="ml-2" width="30" src="@/assets/dolphin-icon.svg" />
+          </v-btn>
+
+        <v-btn v-if="medical.taken >= medical.frequency"
+          class="mt-5"
+          append-icon="mdi mdi-phone"
+          height="60"
+          width='100%'
+          onclick='location.href="/joinfinn"'>
+          Check alternatives
+        </v-btn>
+
+        </div>
 
         <v-btn
           class="mt-5"
-          id="join"
+          append-icon="mdi mdi-phone"
           height="60"
           onclick='location.href="/joinfinn"'>
-          Try FINN Pain Relief
-          <v-img class="ml-2" width="30" src="@/assets/dolphin-icon.svg" />
+          SEEK Assistance
         </v-btn>
-
-        <v-btn
-          class="mt-5"
-          append-icon="mdi mdi-pill"
-          height="60"
-          onclick='location.href="/journey"'>
-          MEDICATION JOURNEY
-        </v-btn>
-
-        <v-row class="mt-5 justify-self-center">
-          <v-btn
-            class="mt-5 mx-3"
-            append-icon="mdi mdi-phone"
-            height="90"
-            onclick='location.href="/joinfinn"'>
-            SEEK ASSISTANCE
-          </v-btn>
-
-          <v-btn
-            class="mt-5 mx-3"
-            append-icon="mdi mdi-account"
-            height="90"
-            onclick='location.href="/joinfinn"'>
-            PROFILE
-          </v-btn>
-        </v-row>
       </v-col>
+
     </v-row>
 
     <!--    <v-row class='flex-column text-truncate text-wrap'>-->
@@ -114,40 +180,6 @@
   </v-container>
 </template>
 
-<script>
-import Header from '@/components/Header.vue';
-import Medications from '@/components/Medications.vue';
-import Symptoms from '@/components/Symptoms.vue';
-import Assistance from '@/components/Assistance.vue';
-import router from '@/router';
-import WaveTop from '@/components/Header.vue';
-import Footer from '@/components/Footer.vue';
-
-export default {
-  components: {
-    Footer,
-    Header,
-    Medications,
-    Symptoms,
-    Assistance,
-    WaveTop,
-  },
-};
-
-let symptomsSelected = 0;
-
-const onSymptomsSelected = (isSelected) => {
-  if (isSelected) {
-    symptomsSelected++;
-  } else {
-    symptomsSelected--;
-  }
-  if (symptomsSelected > 2) {
-    router.push({ name: 'JoinFinn' });
-  }
-  console.log(symptomsSelected);
-};
-</script>
 
 <style scoped>
 /*

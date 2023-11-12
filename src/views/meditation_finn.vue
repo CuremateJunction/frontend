@@ -29,9 +29,7 @@
       go, and be.
     </p>
 
-    <a class="link" href="/dashboard"
-      ><v-icon icon="mdi mdi-home"></v-icon>Home</a
-    >
+    <a class="link" href="/"><v-icon icon="mdi mdi-home"></v-icon>Home</a>
   </div>
 </template>
 

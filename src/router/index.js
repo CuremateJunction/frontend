@@ -52,6 +52,11 @@ const routes = [
         name: 'Figma',
         component: () => import('@/views/FigmaFrame.vue'),
       },
+      {
+        path: 'journey',
+        name: 'Journey',
+        component: () => import('@/views/MedicationJourney.vue'),
+      },
     ],
   },
 ];
