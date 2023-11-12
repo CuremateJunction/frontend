@@ -4,60 +4,57 @@
     fluid>
     <Header class="d-flex mt-0 pt-0 pl-0 w-100 mb-auto" />
 
-    <v-row align='start' :dense='true' class="d-block pa-0 ma-0">
-      <v-col cols="auto" class='d-inline-block ma-0 pa-0'>
-        <h3 class='text-h3'>HELLO,</h3>
-        <h2 class='text-h1'>Lisa!</h2>
+    <v-row align="start" :dense="true" class="d-block pa-0 ma-0">
+      <v-col cols="auto" class="d-inline-block ma-0 pa-0">
+        <h3 class="text-h3">HELLO,</h3>
+        <h2 class="text-h1">Lisa!</h2>
       </v-col>
 
-      <v-col cols="auto" class='d-inline-block ma-0 pa-0 ml-1'>
-        <v-img id="finn"
-               src="@/assets/finn.svg"
-               alt="hello there"
-               width='170'
-               max-width='300px'
-               class="ma-0 pa-0"/>
-        </v-col>
+      <v-col cols="auto" class="d-inline-block ma-0 pa-0 ml-1">
+        <v-img
+          id="finn"
+          src="@/assets/finn.svg"
+          alt="hello there"
+          width="170"
+          max-width="300px"
+          class="ma-0 pa-0" />
+      </v-col>
     </v-row>
 
-    <v-row class='d-flex flex-row mb-auto mx-auto'>
-      <v-col class="d-flex flex-column align-self-start ">
+    <v-row class="d-flex flex-row mb-auto mx-auto">
+      <v-col class="d-flex flex-column align-self-start">
         <p class="d-flex justify-center">Not feeling well?</p>
 
         <v-btn
           class="mt-5"
           id="join"
-          height='60'
+          height="60"
           onclick='location.href="/joinfinn"'>
           Try FINN Pain Relief
-          <v-img
-            class='ml-2'
-            width="30"
-            src='@/assets/dolphin-icon.svg'/>
+          <v-img class="ml-2" width="30" src="@/assets/dolphin-icon.svg" />
         </v-btn>
 
         <v-btn
           class="mt-5"
-          append-icon='mdi mdi-pill'
-          height='60'
+          append-icon="mdi mdi-pill"
+          height="60"
           onclick='location.href="/joinfinn"'>
           MEDICATION JOURNEY
         </v-btn>
 
-        <v-row
-          class='mt-5 justify-self-center'>
+        <v-row class="mt-5 justify-self-center">
           <v-btn
             class="mt-5 mx-3"
-            append-icon='mdi mdi-phone'
-            height='90'
+            append-icon="mdi mdi-phone"
+            height="90"
             onclick='location.href="/joinfinn"'>
             SEEK ASSISTANCE
           </v-btn>
 
           <v-btn
             class="mt-5 mx-3"
-            append-icon='mdi mdi-account'
-            height='90'
+            append-icon="mdi mdi-account"
+            height="90"
             onclick='location.href="/joinfinn"'>
             PROFILE
           </v-btn>
@@ -65,56 +62,55 @@
       </v-col>
     </v-row>
 
-<!--    <v-row class='flex-column text-truncate text-wrap'>-->
-<!--      <v-col class='text-truncate text-wrap'>-->
-<!--      <Symptoms @symptomsSelected="onSymptomsSelected" />-->
-<!--      </v-col>-->
-<!--&lt;!&ndash;      <div v-if="symptomsSelected > 1">Hi!</div>&ndash;&gt;-->
-<!--    </v-row>-->
+    <!--    <v-row class='flex-column text-truncate text-wrap'>-->
+    <!--      <v-col class='text-truncate text-wrap'>-->
+    <!--      <Symptoms @symptomsSelected="onSymptomsSelected" />-->
+    <!--      </v-col>-->
+    <!--&lt;!&ndash;      <div v-if="symptomsSelected > 1">Hi!</div>&ndash;&gt;-->
+    <!--    </v-row>-->
 
-    <v-row class='d-flex align-center justify-center'>
-    <Footer class='mb-2'></Footer>
+    <v-row class="d-flex align-center justify-center">
+      <Footer class="mb-2"></Footer>
     </v-row>
 
+    <!--    <v-row-->
+    <!--      class="d-flex flex-column align-start justify-start">-->
 
-<!--    <v-row-->
-<!--      class="d-flex flex-column align-start justify-start">-->
+    <!--      <v-col id="divider" class="">-->
+    <!--        <div class="d-flex justify-center">-->
+    <!--          -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; OR -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+    <!--        </div>-->
+    <!--      </v-col>-->
 
-<!--      <v-col id="divider" class="">-->
-<!--        <div class="d-flex justify-center">-->
-<!--          -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; OR -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
-<!--        </div>-->
-<!--      </v-col>-->
+    <!--      <v-row class='d-flex flex-row'>-->
+    <!--        <v-col cols='auto'>-->
+    <!--          <v-sheet class="pa-2 ma-2">-->
+    <!--            <v-btn-->
+    <!--              width='100'-->
+    <!--              class=""-->
+    <!--              :to="'/joinfinn'">-->
+    <!--              <p class='text-wrap'>Medication Journey</p>-->
+    <!--            </v-btn>-->
+    <!--          </v-sheet>-->
+    <!--        </v-col>-->
 
-<!--      <v-row class='d-flex flex-row'>-->
-<!--        <v-col cols='auto'>-->
-<!--          <v-sheet class="pa-2 ma-2">-->
-<!--            <v-btn-->
-<!--              width='100'-->
-<!--              class=""-->
-<!--              :to="'/joinfinn'">-->
-<!--              <p class='text-wrap'>Medication Journey</p>-->
-<!--            </v-btn>-->
-<!--          </v-sheet>-->
-<!--        </v-col>-->
+    <!--        <v-col cols='auto'>-->
+    <!--          <v-sheet class="pa-2 ma-2">-->
+    <!--            <v-btn-->
+    <!--              style="word-wrap: break-word"-->
+    <!--              class="text-wrap text-break text-truncate"-->
+    <!--              width='8rem'-->
+    <!--              onclick='location.href="help"'>-->
+    <!--              Seek Assistance-->
+    <!--            </v-btn>-->
+    <!--          </v-sheet>-->
+    <!--        </v-col>-->
+    <!--      </v-row>-->
+    <!--    </v-row>-->
 
-<!--        <v-col cols='auto'>-->
-<!--          <v-sheet class="pa-2 ma-2">-->
-<!--            <v-btn-->
-<!--              style="word-wrap: break-word"-->
-<!--              class="text-wrap text-break text-truncate"-->
-<!--              width='8rem'-->
-<!--              onclick='location.href="help"'>-->
-<!--              Seek Assistance-->
-<!--            </v-btn>-->
-<!--          </v-sheet>-->
-<!--        </v-col>-->
-<!--      </v-row>-->
-<!--    </v-row>-->
+    <!--    <Symptoms @symptomsSelected="onSymptomsSelected" />-->
 
-<!--    <Symptoms @symptomsSelected="onSymptomsSelected" />-->
-
-<!--    <div v-if="symptomsSelected > 1">Hi!</div>-->
+    <!--    <div v-if="symptomsSelected > 1">Hi!</div>-->
   </v-container>
 </template>
 
@@ -127,7 +123,7 @@ import router from '@/router';
 import WaveTop from '@/components/Header.vue';
 import Footer from '@/components/Footer.vue';
 
-export default{
+export default {
   components: {
     Footer,
     Header,
@@ -136,7 +132,7 @@ export default{
     Assistance,
     WaveTop,
   },
-}
+};
 
 let symptomsSelected = 0;
 

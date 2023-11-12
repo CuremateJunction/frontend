@@ -12,12 +12,19 @@ export default {
 </script>
 
 <template>
-  <v-btn
-    prepend-icon="mdi mdi-home"
-    text="Home"
-    class="mb-2"
-    color="primary-darken-1"
-    :to="'/'" />
+  <v-row class="mt-5 justify-self-center">
+    <v-btn
+      prepend-icon="mdi mdi-home"
+      text="Home"
+      class="mt-5 mx-3"
+      color="primary-darken-1"
+      :to="'/'" />
+    <v-btn
+      text="Figma prototype"
+      class="mt-5 mx-3"
+      color="primary-darken-1"
+      :to="'/figma'" />
+  </v-row>
 </template>
 
 <style scoped></style>
