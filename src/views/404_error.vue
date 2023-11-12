@@ -17,7 +17,7 @@
     </v-row>
 
     <v-row class="d-flex flex-column justify-start align-center">
-        <Footer></Footer>
+      <Footer></Footer>
     </v-row>
   </v-container>
 </template>
